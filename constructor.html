@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">
+    <p id="demo"></p>
+
+    </h1>
+    <script>
+        function Obj(name, age, branch){
+            this.Name =name;
+            this.Age =age;
+            this.Branch=branch;
+            this.info = function() {
+    return this.Name + " " + this.Age;
+  };
+        }
+        const ramesh=new Obj("bunny",21,"CSE");
+        const Rajesh=new Obj("bugs",12,"ECE");
+        document.getElementById("h1").innerHTML=ramesh.info();
+
+
+       
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.name = function() {
+    return this.firstName + " " + this.lastName
+  };
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+
+// Display full name
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name(); 
+
+    </script>
+</body>
+</html>
